@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Graphics Dashboard Electron App",
   "main": "main.js",
-  "author": "",
+  "author": "Central Sports Network, LLC.",
   "license": "ISC",
   "scripts": {
     "start": "electron .",
@@ -21,6 +21,11 @@
     ],
     "win": {
       "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true
     }
   }
 }
