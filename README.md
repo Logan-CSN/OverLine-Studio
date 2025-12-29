@@ -1,6 +1,6 @@
-# Graphics Dashboard
+# OverLine Studio
 
-**Graphics Dashboard** is a sports production graphics program built for **Central Sports Network**. This software allows users to manage and display graphics for sports broadcasts.
+**OverLine Studio** is a sports production graphics program built for **Central Sports Network**. This software allows users to manage and display graphics for sports broadcasts.
 
 ---
 
@@ -14,7 +14,7 @@ This is a **beta/testing version**. The program is **not complete**, and functio
 
 The Windows installer (.exe) can be downloaded from the **Releases** page:
 
-[Releases](https://github.com/Logan-CSN/Graphics_Dashboard/releases)
+[Releases](https://github.com/Logan-CSN/OverLine_Studio/releases)
 
 ---
 
