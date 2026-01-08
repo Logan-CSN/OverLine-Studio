@@ -4074,8 +4074,10 @@
                   console.log('  - currentDisplayedStat:', data.currentDisplayedStat);
                   console.log('  - hasFootballStats:', !!data.footballStats);
                   console.log('  - hasVolleyballStats:', !!data.volleyballStats);
+                  console.log('  - hasBasketballStats:', !!data.basketballStats);
                   console.log('  - footballStats:', data.footballStats);
                   console.log('  - volleyballStats:', data.volleyballStats);
+                  console.log('  - basketballStats:', data.basketballStats);
                   console.log('  - statsRectangleExists:', !!statsRectangle);
 
                   if (!statsRectangle) {
@@ -4084,7 +4086,14 @@
                   }
 
                   // Determine which stats object to use based on sport
-                  const stats = data.selectedSport === 'volleyball' ? data.volleyballStats : data.footballStats;
+                  let stats;
+                  if (data.selectedSport === 'volleyball') {
+                    stats = data.volleyballStats;
+                  } else if (data.selectedSport === 'basketball') {
+                    stats = data.basketballStats;
+                  } else {
+                    stats = data.footballStats;
+                  }
 
                   // Update sport mode class
                   if (data.selectedSport === 'volleyball') {
@@ -4133,6 +4142,14 @@
                     'totalYards': 'Total Yards',
                     'passingYards': 'Passing Yards',
                     'rushingYards': 'Rushing Yards',
+                    'rushing_yards': 'Rushing Yards',
+                    'passing_yards': 'Passing Yards',
+                    'total_yards': 'Total Yards',
+                    'touchdowns': 'Touchdowns',
+                    'field_goals': 'Field Goals',
+                    'first_downs': 'First Downs',
+                    'penalty_yards': 'Penalty Yards',
+                    'time_of_possession': 'Time of Possession',
                     'setsWon': 'Sets Won - Best of 5',
                     'sets_Won': 'Sets Won - Best of 5',
                     'kills': 'Kills',
@@ -4142,7 +4159,16 @@
                     'assists': 'Assists',
                     'errors': 'Errors',
                     'hitting_percentage': 'Hitting %',
-                    'service_errors': 'Service Errors'
+                    'service_errors': 'Service Errors',
+                    'points': 'Points',
+                    'rebounds': 'Rebounds',
+                    'steals': 'Steals',
+                    'field_goal_pct': 'Field Goal %',
+                    'three_pointers': '3-Pointers Made',
+                    'three_point_pct': '3-Point %',
+                    'free_throws': 'Free Throws',
+                    'free_throw_pct': 'Free Throw %',
+                    'fouls': 'Fouls'
                   };
                   return statNames[statKey] || statKey.charAt(0).toUpperCase() + statKey.slice(1);
                 }
